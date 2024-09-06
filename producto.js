@@ -7,7 +7,7 @@ $(document).ready(function(){
     var codigo = $('#codigo');
     codigo.on('input', function() {
         codigo.val(codigo.val().toUpperCase())
-        console.log(codigo.val());
+        console.log(codigo.val())
     });
 //-----------------------------------------------------------------------------//
 //-----------------------------------------------------------------------------//
@@ -126,6 +126,9 @@ $(document).ready(function(){
         }
     });
 
+//-----------------------------------------------------------------------------//
+//-----------------------ANULACION DE CHECKBOX---------------------------------//
+//-----------------------------------------------------------------------------//
 
     $("input[type='checkbox']").on('change', function() {
 
@@ -197,12 +200,12 @@ $(document).ready(function(){
                                     }else if(documento.length<10 || documento.length>1000){
                                         alert("La descripcion del producto debe tener entre 10 a 1000 caracteres")
                                     }else{
-                                        var checkboxes = {}
+                                        var datoscheckboxes = {}
                                         checkedCheckboxes.each(function(){
-                                            checkboxes [$(this).attr("id")] = $(this).val()
+                                            datoscheckboxes [$(this).attr("id")] = $(this).val()
                                         })
                                         
-                                        var check = $.param(checkboxes);
+                                        var check = $.param(datoscheckboxes);
                                         var datos = $("#formulario").serialize();
                                         var datosCombinados = datos + '&' + check;
                                         $.ajax({
@@ -210,7 +213,6 @@ $(document).ready(function(){
                                             type: 'POST',
                                             data:{'datosCombinados':datosCombinados},
                                             success: function(response){
-                                                console.log(response)
                                                 var respuesta = JSON.parse(response);
                                                 if (respuesta.status == 1) {
                                                     alert(respuesta.message)
