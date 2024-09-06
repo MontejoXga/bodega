@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="contenedor centrar">
+        <div class="tarjeta">
+            <div class="tarjeta-cabecera">
+                <h1>Formulario de Producto</h1>
+            </div>
+            <div class="tarjeta-cuerpo">
+                <form id="formulario" method="post">
+                    <div class="cuerpo-formulario">
+                        <div class="cuerpos-inputs">
+                            <div class="cuadro">
+                                <label for="codigo">Codigo</label>
+                                <input class="campo" id="codigo" name="codigo" type="text" >
+                            </div>
+                            <div class="cuadro">
+                                <label for="nombre">Nombre</label>
+                                <input class="campo" id="nombre" name="nombre" type="text">
+                            </div>
+                            <div class="cuadro">
+                                <label for="bodega">Bodega</label>
+                                <select class="campo-select" name="bodega" id="bodega"></select>
+                            </div>
+                            <div class="cuadro">
+                                <label for="sucursal">Sucursal</label>
+                                <select class="campo-select" name="sucursal" id="sucursal"></select>
+                            </div>
+                            <div class="cuadro">
+                                <label for="moneda">Moneda</label>
+                                <select class="campo-select" name="moneda" id="moneda"></select>
+                            </div>
+                            <div class="cuadro">
+                                <label for="precio">Precio</label>
+                                <input class="campo" id="precio" name="precio" type="number" step=0.01 >
+                            </div>
+                        </div>
+                        <div class="cuadro">
+                            <label>Material de Producto</label>
+                            <div class="inputs">
+                                <input type="checkbox" class="opciones" value="Plastico">
+                                <label for="">Plastico</label>
+                                <input type="checkbox" class="opciones" value="Metal">
+                                <label for="">Metal</label>
+                                <input type="checkbox" class="opciones" value="Madera">
+                                <label for="">Madera</label>
+                                <input type="checkbox" class="opciones" value="Vidrio">
+                                <label for="">Vidrio</label>
+                                <input type="checkbox" class="opciones" value="Textil">
+                                <label for="">Textil</label>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <label for="descripcion">Descripcion</label>
+                            <textarea class="descripcion" id="descripcion" name="descripcion"></textarea>
+                        </div>
+                        <div class="cont-boton">
+                            <input class="boton" type="submit" value="Guardar Producto">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="producto.js"></script>
+</html>

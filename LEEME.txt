@@ -1,0 +1,12 @@
+Pasos a seguir para instalar el sistema de registro de productos
+
+1.- Tener instalado el entorno de desarrollo XAMPP
+2.- Crea una carpeta en la ruta C:\xampp\htdocs con el nombre de bodega y realiza un gitclone del respositorio
+3.- Crear una base de datos en MySQL Workbench e importa la base de datos de la bodega que esta en la carpeta sql
+4.- Acceder a la carpeta bd/conexion.phppara verificar si los parametros de $host, $root, $clave coinciden con su computador
+5.- Ejecutar en xampp los servicios de Apache y MySQL asegurate que el servidor de Apache se ejecute en el puerto 80 y el de MySQL en el puerto 3306
+6.- Accede a la direccion http://localhost/formularioP/ en el navegador y usar el sistema
+
+Versiones utilizadas:
+php -> 8.2.12
+MySQL Worbench-> 8.0.38
